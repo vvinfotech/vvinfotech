@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinic Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏥 CarePlus</h2>
+
+            <span>Clinic Management</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#" class="active">📊 Dashboard</a>
+
+            <a href="#">👨‍⚕️ Doctors</a>
+
+            <a href="#">🧑‍🤝‍🧑 Patients</a>
+
+            <a href="#">📅 Appointments</a>
+
+            <a href="#">💊 Prescriptions</a>
+
+            <a href="#">💳 Billing</a>
+
+            <a href="#">📈 Reports</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>Clinic Management System</h1>
+
+                <p>
+                    Manage patients, appointments and clinic billing
+                </p>
+
+            </div>
+
+
+            <div class="clinic-status">
+
+                <span></span>
+
+                Clinic Open
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="dashboard-cards">
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    🧑‍🤝‍🧑
+                </div>
+
+                <div>
+
+                    <h3>428</h3>
+
+                    <p>Total Patients</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <h3>24</h3>
+
+                    <p>Today's Appointments</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    👨‍⚕️
+                </div>
+
+                <div>
+
+                    <h3>8</h3>
+
+                    <p>Doctors</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <h3>₹18,650</h3>
+
+                    <p>Today's Collection</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="section-box">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>Quick Actions</h2>
+
+                    <p>
+                        Common clinic operations
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <button
+                    onclick="showMessage('New patient registration opened')"
+                >
+                    ➕ New Patient
+                </button>
+
+
+                <button
+                    onclick="showMessage('Appointment booking opened')"
+                >
+                    📅 New Appointment
+                </button>
+
+
+                <button
+                    onclick="showMessage('Patient records opened')"
+                >
+                    🧑‍🤝‍🧑 Patient Records
+                </button>
+
+
+                <button
+                    onclick="showMessage('Billing screen opened')"
+                >
+                    💳 New Bill
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPOINTMENTS ================= -->
+
+        <section class="section-box">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>Today's Appointments</h2>
+
+                    <p>
+                        Upcoming patient appointments
+                    </p>
+
+                </div>
+
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Patient ID</th>
+
+                            <th>Patient Name</th>
+
+                            <th>Doctor</th>
+
+                            <th>Time</th>
+
+                            <th>Type</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>#P1025</td>
+
+                            <td>Ramesh Kumar</td>
+
+                            <td>Dr. Arun</td>
+
+                            <td>10:00 AM</td>
+
+                            <td>General</td>
+
+                            <td>
+
+                                <span class="status confirmed">
+                                    Confirmed
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#P1024</td>
+
+                            <td>Priya</td>
+
+                            <td>Dr. Meena</td>
+
+                            <td>10:30 AM</td>
+
+                            <td>Dental</td>
+
+                            <td>
+
+                                <span class="status waiting">
+                                    Waiting
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#P1023</td>
+
+                            <td>Karthik</td>
+
+                            <td>Dr. Arun</td>
+
+                            <td>11:15 AM</td>
+
+                            <td>General</td>
+
+                            <td>
+
+                                <span class="status confirmed">
+                                    Confirmed
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#P1022</td>
+
+                            <td>Divya</td>
+
+                            <td>Dr. Meena</td>
+
+                            <td>12:00 PM</td>
+
+                            <td>Follow-up</td>
+
+                            <td>
+
+                                <span class="status completed">
+                                    Completed
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DOCTORS ================= -->
+
+        <section class="section-box">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>Our Doctors</h2>
+
+                    <p>
+                        Doctors currently available
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="doctor-grid">
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <div>
+
+                        <h3>Dr. Arun Kumar</h3>
+
+                        <p>General Physician</p>
+
+                    </div>
+
+                    <span class="available">
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-icon">
+                        👩‍⚕️
+                    </div>
+
+                    <div>
+
+                        <h3>Dr. Meena</h3>
+
+                        <p>Dentist</p>
+
+                    </div>
+
+                    <span class="available">
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <div>
+
+                        <h3>Dr. Ravi</h3>
+
+                        <p>Cardiologist</p>
+
+                    </div>
+
+                    <span class="busy">
+                        Busy
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

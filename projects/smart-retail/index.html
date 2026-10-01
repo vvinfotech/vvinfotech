@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Retail Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🛒 Smart Retail
+        </div>
+
+
+        <nav>
+
+            <a href="#" class="active">
+                📊 Dashboard
+            </a>
+
+            <a href="#">
+                📦 Products
+            </a>
+
+            <a href="#">
+                🏷️ Categories
+            </a>
+
+            <a href="#">
+                📋 Stock
+            </a>
+
+            <a href="#">
+                🧾 Sales
+            </a>
+
+            <a href="#">
+                👥 Customers
+            </a>
+
+            <a href="#">
+                📊 Reports
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Smart Retail Management</h1>
+
+                <p>
+                    Manage products, stock, sales and customers
+                </p>
+
+            </div>
+
+
+            <div class="admin">
+                👤 Admin
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="dashboard-cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <div>
+
+                    <h3>Total Products</h3>
+
+                    <strong>248</strong>
+
+                    <p>Active Products</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <h3>Low Stock</h3>
+
+                    <strong>12</strong>
+
+                    <p>Need Restocking</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🧾
+                </div>
+
+                <div>
+
+                    <h3>Today's Sales</h3>
+
+                    <strong>₹18,450</strong>
+
+                    <p>24 Transactions</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <h3>Customers</h3>
+
+                    <strong>586</strong>
+
+                    <p>Registered Customers</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="section">
+
+
+            <div class="section-header">
+
+                <h2>Quick Actions</h2>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+
+                <button onclick="showMessage('New product entry opened')">
+                    ➕ Add Product
+                </button>
+
+
+                <button onclick="showMessage('New sale screen opened')">
+                    🧾 New Sale
+                </button>
+
+
+                <button onclick="showMessage('Stock management opened')">
+                    📦 Update Stock
+                </button>
+
+
+                <button onclick="showMessage('Customer registration opened')">
+                    👤 Add Customer
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= RECENT SALES ================= -->
+
+        <section class="section">
+
+
+            <div class="section-header">
+
+                <h2>Recent Sales</h2>
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+
+            <div class="table-container">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Bill No</th>
+
+                            <th>Customer</th>
+
+                            <th>Items</th>
+
+                            <th>Amount</th>
+
+                            <th>Payment</th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>#INV1025</td>
+
+                            <td>Ramesh</td>
+
+                            <td>5</td>
+
+                            <td>₹2,450</td>
+
+                            <td>
+                                <span class="status paid">
+                                    Paid
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>#INV1024</td>
+
+                            <td>Priya</td>
+
+                            <td>3</td>
+
+                            <td>₹1,280</td>
+
+                            <td>
+                                <span class="status paid">
+                                    Paid
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>#INV1023</td>
+
+                            <td>Kumar</td>
+
+                            <td>8</td>
+
+                            <td>₹4,620</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= LOW STOCK ================= -->
+
+        <section class="section">
+
+
+            <div class="section-header">
+
+                <h2>Low Stock Products</h2>
+
+                <button class="view-btn">
+                    Manage Stock
+                </button>
+
+            </div>
+
+
+
+            <div class="stock-grid">
+
+
+                <div class="stock-item low-stock">
+
+                    <h3>Rice 25kg</h3>
+
+                    <p>Grocery</p>
+
+                    <strong>4 Units Left</strong>
+
+                </div>
+
+
+
+                <div class="stock-item low-stock">
+
+                    <h3>Cooking Oil 5L</h3>
+
+                    <p>Grocery</p>
+
+                    <strong>6 Units Left</strong>
+
+                </div>
+
+
+
+                <div class="stock-item">
+
+                    <h3>Bath Soap</h3>
+
+                    <p>Personal Care</p>
+
+                    <strong>12 Units</strong>
+
+                </div>
+
+
+
+                <div class="stock-item">
+
+                    <h3>Tea Powder</h3>
+
+                    <p>Beverages</p>
+
+                    <strong>15 Units</strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

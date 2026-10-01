@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Service Center Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>FixPoint</h2>
+            <span>Service Center</span>
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">📊 Dashboard</a>
+            <a href="#">📋 Job Cards</a>
+            <a href="#">🔧 Services</a>
+            <a href="#">📦 Spare Parts</a>
+            <a href="#">👥 Customers</a>
+            <a href="#">👨‍🔧 Technicians</a>
+            <a href="#">💳 Billing</a>
+            <a href="#">📈 Reports</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+                <h1>Service Center Management</h1>
+                <p>Manage job cards, spare parts and service status</p>
+            </div>
+
+            <div class="center-status">
+                <span></span>
+                Service Center Open
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD CARDS -->
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">📋</div>
+
+                <div>
+                    <h3>48</h3>
+                    <p>Active Job Cards</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">🔧</div>
+
+                <div>
+                    <h3>26</h3>
+                    <p>Vehicles in Service</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">📦</div>
+
+                <div>
+                    <h3>184</h3>
+                    <p>Spare Parts</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">💰</div>
+
+                <div>
+                    <h3>₹36,850</h3>
+                    <p>Today's Collection</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Frequently used service operations</p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <button onclick="showMessage('New job card module opened.')">
+                    📋 New Job Card
+                </button>
+
+                <button onclick="showMessage('Spare parts module opened.')">
+                    📦 Spare Parts
+                </button>
+
+                <button onclick="showMessage('Service status module opened.')">
+                    🔧 Update Status
+                </button>
+
+                <button onclick="showMessage('Billing module opened.')">
+                    💳 New Bill
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVE JOB CARDS -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Active Job Cards</h2>
+                    <p>Current vehicles under service</p>
+                </div>
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Job ID</th>
+                            <th>Customer</th>
+                            <th>Vehicle</th>
+                            <th>Technician</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>#JOB1025</td>
+                            <td>Ramesh</td>
+                            <td>Hyundai i20</td>
+                            <td>Arun</td>
+                            <td>₹4,850</td>
+                            <td>
+                                <span class="status progress">
+                                    In Progress
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#JOB1024</td>
+                            <td>Priya</td>
+                            <td>Honda City</td>
+                            <td>Kumar</td>
+                            <td>₹7,200</td>
+                            <td>
+                                <span class="status ready">
+                                    Ready
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#JOB1023</td>
+                            <td>Karthik</td>
+                            <td>Maruti Swift</td>
+                            <td>Arun</td>
+                            <td>₹3,650</td>
+                            <td>
+                                <span class="status progress">
+                                    In Progress
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#JOB1022</td>
+                            <td>Divya</td>
+                            <td>Tata Nexon</td>
+                            <td>Vijay</td>
+                            <td>₹8,450</td>
+                            <td>
+                                <span class="status waiting">
+                                    Waiting
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICE STATUS -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Service Overview</h2>
+                    <p>Current service workflow</p>
+                </div>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>Job Created</h3>
+                    <p>18 Vehicles</p>
+                </div>
+
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Under Service</h3>
+                    <p>26 Vehicles</p>
+                </div>
+
+
+                <div class="service-card">
+                    <div class="service-icon">✅</div>
+                    <h3>Ready for Delivery</h3>
+                    <p>12 Vehicles</p>
+                </div>
+
+
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Delivered</h3>
+                    <p>38 Vehicles</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

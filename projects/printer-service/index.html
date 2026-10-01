@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Printer Service Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>🖨️</span>
+            PrinterCare
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">
+                📊 Dashboard
+            </a>
+
+            <a href="#">
+                🖨️ Machine Sales
+            </a>
+
+            <a href="#">
+                📦 Spare Parts
+            </a>
+
+            <a href="#">
+                🔧 Service Calls
+            </a>
+
+            <a href="#">
+                👨‍🔧 Technicians
+            </a>
+
+            <a href="#">
+                📋 Installations
+            </a>
+
+            <a href="#">
+                💰 Sales & Payments
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Printer Service Management</h1>
+                <p>Manage sales, stock, service calls and technicians</p>
+            </div>
+
+            <div class="admin">
+                👤 Admin
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+                <div class="card-icon">🖨️</div>
+                <div>
+                    <h3>Machine Sales</h3>
+                    <strong>24</strong>
+                    <p>This Month</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <div>
+                    <h3>Spare Parts</h3>
+                    <strong>156</strong>
+                    <p>Available Stock</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🔧</div>
+                <div>
+                    <h3>Service Calls</h3>
+                    <strong>18</strong>
+                    <p>Open Calls</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">👨‍🔧</div>
+                <div>
+                    <h3>Technicians</h3>
+                    <strong>10</strong>
+                    <p>Active Workers</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Quick Actions</h2>
+            </div>
+
+            <div class="quick-actions">
+
+                <button onclick="showMessage('New machine sale started')">
+                    ➕ New Machine Sale
+                </button>
+
+                <button onclick="showMessage('New service call created')">
+                    🔧 New Service Call
+                </button>
+
+                <button onclick="showMessage('Stock entry opened')">
+                    📦 Stock Entry
+                </button>
+
+                <button onclick="showMessage('Technician assignment opened')">
+                    👨‍🔧 Assign Technician
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICE CALLS ================= -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>Recent Service Calls</h2>
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Call ID</th>
+                            <th>Customer</th>
+                            <th>Machine</th>
+                            <th>Technician</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>#SC1001</td>
+                            <td>ABC Computers</td>
+                            <td>Canon IR 2006N</td>
+                            <td>Arun</td>
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#SC1002</td>
+                            <td>Vijay Xerox</td>
+                            <td>Epson L3250</td>
+                            <td>Prakash</td>
+                            <td>
+                                <span class="status progress">
+                                    In Progress
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#SC1003</td>
+                            <td>Sri Lakshmi Stores</td>
+                            <td>HP LaserJet</td>
+                            <td>Karthik</td>
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STOCK ================= -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>Spare Parts Stock</h2>
+
+                <button class="view-btn">
+                    Manage Stock
+                </button>
+
+            </div>
+
+
+            <div class="stock-grid">
+
+                <div class="stock-item">
+                    <h3>Drum Unit</h3>
+                    <p>Canon Compatible</p>
+                    <strong>25 Units</strong>
+                </div>
+
+
+                <div class="stock-item">
+                    <h3>Toner Cartridge</h3>
+                    <p>Black</p>
+                    <strong>48 Units</strong>
+                </div>
+
+
+                <div class="stock-item">
+                    <h3>Pickup Roller</h3>
+                    <p>Printer Spare</p>
+                    <strong>32 Units</strong>
+                </div>
+
+
+                <div class="stock-item low-stock">
+                    <h3>Fuser Assembly</h3>
+                    <p>HP Compatible</p>
+                    <strong>5 Units</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Ordering System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>🍽️ FoodHub</h2>
+            <span>Restaurant Management</span>
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">📊 Dashboard</a>
+
+            <a href="#">🍴 Menu</a>
+
+            <a href="#">🧾 Orders</a>
+
+            <a href="#">🪑 Tables</a>
+
+            <a href="#">👥 Customers</a>
+
+            <a href="#">💳 Payments</a>
+
+            <a href="#">📈 Reports</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <header class="top-header">
+
+            <div>
+                <h1>Restaurant Ordering System</h1>
+
+                <p>
+                    Manage menu, orders, tables and customers
+                </p>
+            </div>
+
+            <div class="restaurant-status">
+                <span></span>
+                Restaurant Open
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">🍽️</div>
+
+                <div>
+                    <h3>86</h3>
+                    <p>Today's Orders</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">💰</div>
+
+                <div>
+                    <h3>₹24,850</h3>
+                    <p>Today's Sales</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">🪑</div>
+
+                <div>
+                    <h3>12 / 18</h3>
+                    <p>Tables Occupied</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">👨‍🍳</div>
+
+                <div>
+                    <h3>32</h3>
+                    <p>Menu Items</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <h2>Quick Actions</h2>
+
+                <p>Common restaurant operations</p>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <button onclick="showMessage('New order screen opened')">
+                    ➕ New Order
+                </button>
+
+                <button onclick="showMessage('Menu management opened')">
+                    🍴 Manage Menu
+                </button>
+
+                <button onclick="showMessage('Table management opened')">
+                    🪑 Manage Tables
+                </button>
+
+                <button onclick="showMessage('Payment screen opened')">
+                    💳 New Payment
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT ORDERS ================= -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Recent Orders</h2>
+                    <p>Latest restaurant orders</p>
+                </div>
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Table</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#ORD1025</td>
+                            <td>Ramesh</td>
+                            <td>T-05</td>
+                            <td>4</td>
+                            <td>₹1,240</td>
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#ORD1024</td>
+                            <td>Priya</td>
+                            <td>T-02</td>
+                            <td>2</td>
+                            <td>₹680</td>
+                            <td>
+                                <span class="status preparing">
+                                    Preparing
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#ORD1023</td>
+                            <td>Kumar</td>
+                            <td>T-08</td>
+                            <td>6</td>
+                            <td>₹2,150</td>
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#ORD1022</td>
+                            <td>Arun</td>
+                            <td>T-11</td>
+                            <td>3</td>
+                            <td>₹950</td>
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MENU ================= -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Popular Menu</h2>
+                    <p>Today's popular food items</p>
+                </div>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+
+                    <div class="food-icon">🍕</div>
+
+                    <div>
+                        <h3>Chicken Pizza</h3>
+                        <p>Fast Food</p>
+                    </div>
+
+                    <strong>₹280</strong>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="food-icon">🍔</div>
+
+                    <div>
+                        <h3>Chicken Burger</h3>
+                        <p>Fast Food</p>
+                    </div>
+
+                    <strong>₹180</strong>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="food-icon">🍛</div>
+
+                    <div>
+                        <h3>Chicken Biryani</h3>
+                        <p>Main Course</p>
+                    </div>
+
+                    <strong>₹220</strong>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="food-icon">🥤</div>
+
+                    <div>
+                        <h3>Fresh Lime</h3>
+                        <p>Beverages</p>
+                    </div>
+
+                    <strong>₹80</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

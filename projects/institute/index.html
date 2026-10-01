@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Institute Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>EduSmart</h2>
+            <span>Institute Management</span>
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">📊 Dashboard</a>
+            <a href="#">👨‍🎓 Students</a>
+            <a href="#">💰 Fees</a>
+            <a href="#">📅 Attendance</a>
+            <a href="#">📝 Exams</a>
+            <a href="#">👨‍🏫 Teachers</a>
+            <a href="#">📈 Reports</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+                <h1>Institute Management System</h1>
+                <p>Manage students, fees, attendance and examinations</p>
+            </div>
+
+            <div class="institute-status">
+                <span></span>
+                Institute Open
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">👨‍🎓</div>
+
+                <div>
+                    <h3>856</h3>
+                    <p>Total Students</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">💰</div>
+
+                <div>
+                    <h3>₹2,48,500</h3>
+                    <p>This Month Fees</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">📅</div>
+
+                <div>
+                    <h3>92%</h3>
+                    <p>Today's Attendance</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">📝</div>
+
+                <div>
+                    <h3>12</h3>
+                    <p>Upcoming Exams</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Frequently used institute operations</p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <button onclick="showMessage('New student module opened.')">
+                    👨‍🎓 Add Student
+                </button>
+
+                <button onclick="showMessage('Fee collection module opened.')">
+                    💰 Collect Fees
+                </button>
+
+                <button onclick="showMessage('Attendance module opened.')">
+                    📅 Mark Attendance
+                </button>
+
+                <button onclick="showMessage('Exam management module opened.')">
+                    📝 Manage Exams
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STUDENT OVERVIEW ================= -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Recent Students</h2>
+                    <p>Recently registered students</p>
+                </div>
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Student</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Fees</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>#ST1025</td>
+                            <td>Ramesh Kumar</td>
+                            <td>Java Full Stack</td>
+                            <td>1st Year</td>
+                            <td>₹45,000</td>
+                            <td>
+                                <span class="status paid">
+                                    Paid
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#ST1024</td>
+                            <td>Priya</td>
+                            <td>Python Development</td>
+                            <td>2nd Year</td>
+                            <td>₹38,000</td>
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#ST1023</td>
+                            <td>Karthik</td>
+                            <td>Web Development</td>
+                            <td>1st Year</td>
+                            <td>₹32,000</td>
+                            <td>
+                                <span class="status paid">
+                                    Paid
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>#ST1022</td>
+                            <td>Divya</td>
+                            <td>Data Science</td>
+                            <td>3rd Year</td>
+                            <td>₹52,000</td>
+                            <td>
+                                <span class="status partial">
+                                    Partial
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COURSES ================= -->
+
+        <section class="section-box">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Popular Courses</h2>
+                    <p>Currently active courses</p>
+                </div>
+
+            </div>
+
+
+            <div class="course-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">☕</div>
+                    <h3>Java Full Stack</h3>
+                    <p>245 Students</p>
+                </div>
+
+
+                <div class="course-card">
+                    <div class="course-icon">🐍</div>
+                    <h3>Python Development</h3>
+                    <p>186 Students</p>
+                </div>
+
+
+                <div class="course-card">
+                    <div class="course-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>164 Students</p>
+                </div>
+
+
+                <div class="course-card">
+                    <div class="course-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>128 Students</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

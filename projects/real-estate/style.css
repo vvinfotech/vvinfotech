@@ -1,0 +1,491 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ================= HEADER ================= */
+
+.top-header {
+    height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid #e8ebf0;
+}
+
+.brand h2 {
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+
+.brand span {
+    font-size: 11px;
+    color: #7a8494;
+}
+
+.top-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.top-header nav a {
+    text-decoration: none;
+    color: #5f6877;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.top-header nav a:hover,
+.top-header nav a.active {
+    color: #1f2937;
+}
+
+.add-property {
+    border: none;
+    background: #1f2937;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    background: #e9eef5;
+    padding: 75px 6%;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    max-width: 650px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #334155;
+}
+
+.hero-text {
+    color: #667085;
+    font-size: 16px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    margin-top: 35px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 170px;
+    gap: 10px;
+    max-width: 950px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.search-field {
+    padding: 10px 15px;
+    border-right: 1px solid #e6e9ef;
+}
+
+.search-field label {
+    display: block;
+    font-size: 11px;
+    color: #8a93a2;
+    margin-bottom: 6px;
+}
+
+.search-field p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-box button {
+    border: none;
+    background: #1f2937;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* ================= STATS ================= */
+
+.stats-section {
+    max-width: 1100px;
+    margin: -30px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 0 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f0f3f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.stat-card h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #7a8494;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.section-header p {
+    color: #7a8494;
+    font-size: 13px;
+}
+
+.view-btn {
+    border: none;
+    background: #eef1f5;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/* ================= PROPERTY GRID ================= */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.property-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e7eaf0;
+    transition: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+
+/* ================= PROPERTY IMAGE ================= */
+
+.property-image {
+    height: 190px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.house-one {
+    background: linear-gradient(135deg, #b8c5d6, #68788d);
+}
+
+.house-two {
+    background: linear-gradient(135deg, #d5d9df, #84909f);
+}
+
+.house-three {
+    background: linear-gradient(135deg, #c9cdd2, #727c88);
+}
+
+.property-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.property-price {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: #1f2937;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================= PROPERTY CONTENT ================= */
+
+.property-content {
+    padding: 18px;
+}
+
+.property-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #7a8494;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.property-details {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 17px;
+}
+
+.property-details span {
+    background: #f4f6f8;
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #626b78;
+}
+
+.property-content button {
+    width: 100%;
+    border: none;
+    background: #1f2937;
+    color: white;
+    padding: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-container {
+    background: white;
+    border-radius: 10px;
+    overflow-x: auto;
+    border: 1px solid #e7eaf0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8f9fc;
+    color: #6b7280;
+    font-size: 12px;
+    text-align: left;
+    padding: 14px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.new {
+    background: #eef2ff;
+    color: #4355b9;
+}
+
+.contacted {
+    background: #fff6df;
+    color: #b77900;
+}
+
+.visit {
+    background: #eaf8ef;
+    color: #188544;
+}
+
+.closed {
+    background: #edf0f4;
+    color: #596273;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #b9c2cf;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+footer span {
+    color: #8d98a8;
+    font-size: 11px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .top-header {
+        padding: 0 25px;
+    }
+
+    .top-header nav {
+        gap: 12px;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .top-header {
+        height: auto;
+        padding: 20px;
+        display: block;
+    }
+
+    .top-header nav {
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    .search-field {
+        border-right: none;
+        border-bottom: 1px solid #e6e9ef;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
